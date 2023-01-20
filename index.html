@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <img src="images/logo.png" class="logo"> -->
+                <div class="logo">PORTFOLIO</div>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <!-- <li><a href="#">Services</a></li> -->
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p> < Front End Developer /> </p>
+                <h1>Hi,I'm <span>Anirudh</span><br> From India </h1>
+                <h2>A passionate developer working across frontend</h2>
+            </div>
+        </div>
+        
+    </div>
+    <!-- -------about----- -->
+    <div id="about">
+        <div class="container">
+            <!-- <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png"> </div> -->
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ullam, sint vitae nemo
+                            error deleniti dolorum distinctio vero nihil ab, totam molestiae aliquam. Incidunt libero
+                            fugit rerum aliquid doloremque nobis?</p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                                <p class="tab-links" onclick="opentab('Technologies')">Technologies</p>
+                                <p class="tab-links" onclick="opentab('Education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+              
+                                    <li><span>Frontend  DEVELOPMENT</span><br> Hands on Working experience of frontend technologies like HTML/CSS/Javascript/ReactJs/NodeJs/React-Native</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="Technologies">
+                                <ul>
+                                    <li>HTML, CSS, JAVASCRIPT, REACTJS, NODEJS, REACT-NATIVE</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id ="Education">
+                                <ul>
+                                    <li><span>2022</span><br>Frontend Development At School Of Accelerated Learning</li>
+                    
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ------projects------ -->
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Projects</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/work-1.png">
+                        <div class="layer">
+                          <h3>Social Media App</h3>  
+                          <p>the app connne Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eaque.
+                          </p>
+                          <a href="#"><i class="fa-solid fa-code"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work-2.png">
+                        <div class="layer">
+                            <h3>Social Media App 2</h3>  
+                            <p>the app connne Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eaque.
+                            </p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                          </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work-3.png">
+                        <div class="layer">
+                            <h3>Social Media App 3</h3>  
+                            <p>the app connne Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, eaque.
+                            </p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                          </div>
+                    </div>
+                </div>
+              <a href="#" class="btn">see more</a>  
+            </div>
+
+        </div>
+        <!-- ----contact---- -->
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class=""sub-title>Contact Me</h1>
+                        <p>contact@example.com</p>
+                        <p>012346433</p>
+                        <div class="social-icons">
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fab fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © 2023 Anirudh </p>
+            </div>
+        </div>
+        <script>
+           var tablinks = document.getElementsByClassName("tab-links");
+           var tabcontents = document.getElementsByClassName("tab-contents");
+           
+           function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+           }
+        </script>
+        <script>
+            const msg = document.getElementById("msg")
+         form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "MESSAGE SEN "
+                setTimeout(function(){
+                    msg.innerHTML =""
+                },5000)
+                form.reset()
+                .catch(error => console.error('Error!', error.message))
+            })
+        })
+        </script>
+</body>
+
+</html>
