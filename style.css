@@ -4,8 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-html{
-    scroll-behavior:smooth;
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -24,9 +25,10 @@ body {
 .container {
     padding: 10px 10px;
     text-align: center;
-    
+
 }
- /* .container{
+
+/* .container{
     position: fixed;
     width: 100%;
     padding: 15px 0;
@@ -40,19 +42,19 @@ nav {
     flex-wrap: wrap;
 }
 
- .logo {
+.logo {
     width: 140px;
     color: #310dd3;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-     font-weight:bold; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
 
-} 
+}
 
-.logo i{
+.logo i {
     color: rgba(42, 38, 38, 0.815);
     font-size: 90px;
     font-weight: 600;
-   
+
 }
 
 nav ul li {
@@ -67,7 +69,9 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     position: relative;
+
 }
+
 
 nav ul li a::after {
     content: '';
@@ -78,20 +82,26 @@ nav ul li a::after {
     left: 0;
     bottom: -6px;
     transition: 0.5sec;
+    
 }
 
 nav ul li a:hover::after {
     width: 100%;
+   
+}
+nav ul li a:hover {
+    background-color: #111111;
 }
 
 .header-text {
     margin-top: 20%;
     font-size: 10px;
     font-size: 20px;
-   text-align: center;
+    text-align: center;
+ 
 }
 
-.header-text p{
+.header-text p {
     width: 100%;
     padding-top: 20px;
     color: rgb(181, 168, 30);
@@ -101,7 +111,7 @@ nav ul li a:hover::after {
     font-size: 25px;
     letter-spacing: 2px;
     position: relative;
-    
+
 }
 
 .header-text h1 {
@@ -113,8 +123,12 @@ nav ul li a:hover::after {
     color: #ff004f;
 }
 
-.header-text h2{
+.header-text h2 {
     color: rgb(24, 175, 62);
+}
+
+.header-text:hover {
+    transform-origin:0cm;
 }
 
 /* ------about------ */
@@ -141,27 +155,26 @@ nav ul li a:hover::after {
 
 .about-col-2 {
     flex-basis: 60%;
-   
+  
 }
 
 .sub-title {
     font-size: 80px;
     font-weight: 600;
     color: rgb(24, 123, 190);
-    font-family:'Courier New', Courier, monospace;
-    
-    
+    font-family: 'Courier New', Courier, monospace;
+   
 }
 
 .tab-titles {
-    display:inline-flex;
+    display: inline-flex;
     margin: 20PX 0 40PX;
     font-style: italic;
     font-weight: bold;
-   background-color: #0e0d0d;
-   color: chartreuse;
-   
-    
+    background-color: #0e0d0d;
+    color: chartreuse;
+   border-radius: 5px;
+
 }
 
 .tab-links {
@@ -314,24 +327,26 @@ nav ul li a:hover::after {
 }
 
 
-.contact-left p i{
+.contact-left p i {
     color: #ff004f;
     margin-right: 15px;
     font: 25px;
 }
-.social-icons a{
-   text-decoration: none;
-   font-size: 30px;
-   margin-right: 15px;
-   color: #ababab;
-   display: inline-block;
-   transition: transform 0.5s;
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
 }
 
-.social-icons a:hover{
+.social-icons a:hover {
     color: #ff004f;
     transform: translate(-5px);
 }
+
 .btn.btn2 {
     display: inline-block;
     background: #ff004f;
@@ -370,9 +385,10 @@ form btn2 {
     font-weight: 300;
     margin-top: 20px;
 }
-.copyright i{
+
+.copyright i {
     color: #ff004f;
-    
+
 }
 
 /* -----css for small screen--- */
@@ -400,35 +416,46 @@ form btn2 {
         height: 100vh;
         padding-top: 50px;
     }
-    nav ul li{
+
+    nav ul li {
         display: block;
         margin: 25px;
     }
-    .sub-title{
+
+    .sub-title {
         font-size: 40px;
     }
-    .about-col-1, .about-col-2{
+
+    .about-col-1,
+    .about-col-2 {
         flex-basis: 100%;
     }
-    .about-col-1{
+
+    .about-col-1 {
         margin-bottom: 30px;
     }
-    .about-col-2{
-       font-size: 14px; 
+
+    .about-col-2 {
+        font-size: 14px;
     }
-    .tab-links{
+
+    .tab-links {
         font-size: 16px;
         margin-right: 20px;
     }
-    .contact-left, .contact-right{
+
+    .contact-left,
+    .contact-right {
         flex-basis: 100%;
 
     }
-    .copyright{
+
+    .copyright {
         font-size: 14px;
     }
 }
-#msg{
+
+#msg {
     color: #61b752;
     margin-top: -40px;
     display: block;
